@@ -299,8 +299,3 @@ Kỳ vọng pass:
 - Fail ở setup channel: kiểm tra `FABRIC_CFG_PATH`, cert admin orderer, trạng thái orderer
 - Fail ở peer `getinfo`: kiểm tra đúng context `CORE_PEER_*`
 
-## 12) Tài liệu liên quan
-
-- `docs/01-tong-quan-kien-truc-fabric.vi.md`
-- `docs/03-van-hanh-su-co-va-test-fabric.vi.md`
-

@@ -261,8 +261,4 @@ docker compose --env-file config/.env.network -f config/docker-compose-network.y
 docker compose --env-file config/.env.network -f config/docker-compose-network.yaml logs -f orderer1.example.com
 ```
 
-## 6) Tài liệu liên quan
-
-- `docs/01-tong-quan-kien-truc-fabric.vi.md`
-- `docs/02-quy-trinh-trien-khai-fabric.vi.md`
 
