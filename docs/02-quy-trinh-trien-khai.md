@@ -63,12 +63,37 @@ fca 'fabric-ca-client version'
 
 ### 2.2 Chuẩn bị env runtime
 
+**Lần đầu tiên**: Tạo file `.env.network` từ template example:
+
 ```bash
 cd "${FABRIC_HOME}"
-cp -n config/.env.network.example config/.env.network
+cp config/.env.network.example config/.env.network
 ```
 
-Sau đó chỉnh `COUCHDB_PASSWORD` trong `config/.env.network`.
+**Chỉnh sửa các giá trị env** mặc định trong `config/.env.network`:
+
+```bash
+# Mở file để edit (hoặc dùng editor khác)
+vi config/.env.network
+```
+
+Các biến quan trọng cần kiểm tra:
+
+| Biến | Mục đích | Giá trị mặc định |
+|------|---------|-----------------|
+| `FABRIC_LOGGING_SPEC` | Độ chi tiết log (DEBUG/INFO/WARN/ERROR) | `INFO` |
+| `COUCHDB_USER` | Admin user cho CouchDB | `admin` |
+| `COUCHDB_PASSWORD` | Admin password cho CouchDB | `adminpw` (⚠️ **Đổi nếu production**) |
+
+**Ví dụ file `.env.network` sau khi setup**:
+
+```bash
+FABRIC_LOGGING_SPEC=INFO
+COUCHDB_USER=admin
+COUCHDB_PASSWORD=adminpw  # ⚠️ Khuyến nghị: đặt mật khẩu mạnh trong production
+```
+
+Lưu file sau khi chỉnh sửa.
 
 ## 3) Khởi động CA
 

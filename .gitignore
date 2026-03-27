@@ -43,6 +43,15 @@ logs/
 *.tgz
 .tools/
 
+# IDE / System
+node_modules/
+dist/
+build/
+*.pid
+
+# Docker container logs
+.docker/
+
 # Keep production network repo independent from sample assets
 /fabric-samples/
 
